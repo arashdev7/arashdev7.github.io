@@ -8,3 +8,40 @@ body {
 h1 {
   color: #d00000;
 }
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1em;
+}
+
+.project {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 1.5em;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #d32f2f;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 0.5em;
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+
