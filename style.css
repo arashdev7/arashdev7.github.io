@@ -44,4 +44,15 @@ h1 {
   text-decoration: underline;
 }
 
+@media (max-width: 600px) {
+  .project {
+    padding: 1em;
+    font-size: 0.9em;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
 
