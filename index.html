@@ -15,6 +15,7 @@
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
+    <button id="theme-toggle">🌙</button>
     </nav>
 
 
@@ -44,5 +45,25 @@
     <h2 id="about">About Me</h2>
     <p>Hello! I am Batman's brother🛌 </p>
 
+<script>
+  const toggleButton = document.getElementById('theme-toggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+
+  // Set initial theme
+  if (savedTheme === 'light' || (!savedTheme && !prefersDark)) {
+    document.body.classList.add('light-theme');
+    toggleButton.textContent = '🌙';
+  } else {
+    toggleButton.textContent = '🌞';
+  }
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    const isLight = document.body.classList.contains('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    toggleButton.textContent = isLight ? '🌙' : '🌞';
+  });
+</script>
 </body>
 </html>
