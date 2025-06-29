@@ -161,3 +161,16 @@ nav a:hover {
   margin-top: 0.5em;
   font-size: 0.9em;
 }
+
+.project .project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em; /* adjust spacing between buttons */
+  margin-top: 1em;
+  align-items: center;
+}
+
+.project .project-links a,
+.project .read-more {
+  margin: 0; /* remove individual spacing if any */
+}
