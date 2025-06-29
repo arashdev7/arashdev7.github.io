@@ -27,12 +27,26 @@
 body {
   animation: fadeIn 0.5s forwards;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--bg-color);
+  background-image: url("stgate.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: var(--text-color);
   margin: 0;
   padding: 2rem;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
 }
+
+/* 🌙 Invert SVG in dark mode */
+body:not(.light-theme) {
+  filter: invert(1);
+}
+
+/* ✅ Prevent UI/text from inverting too */
+body:not(.light-theme) * {
+  filter: invert(1);
+}
+
 
 @keyframes fadeIn {
   from {
