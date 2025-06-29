@@ -27,23 +27,33 @@
 body {
   animation: fadeIn 0.5s forwards;
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url("stgate.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: var(--text-color);
-  margin: 0;
-  padding: 2rem;
-  transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
+  z-index: -1;
+  opacity: 1; /* adjust if needed */
+  transition: filter 0.4s ease;
 }
 
-/* 🌙 Invert SVG in dark mode */
-body:not(.light-theme) {
-  filter: invert(1);
-}
-
-/* ✅ Prevent UI/text from inverting too */
-body:not(.light-theme) * {
+/* 🌙 Invert the SVG only in dark mode */
+body:not(.light-theme)::before {
   filter: invert(1);
 }
 
