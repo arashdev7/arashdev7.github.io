@@ -86,7 +86,7 @@ nav a:hover {
 /* Projects */
 .projects-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: vertical;
   align-items: center;
   gap: 1.5em;
   padding: 1em;
@@ -173,24 +173,52 @@ nav a:hover {
   color: var(--accent-color);
 }
 
+/* Layout: stack each item vertically */
+.project .project-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8em;
+  margin-top: 1em;
+}
+
+/* Read more style */
+.project .read-more {
+  cursor: pointer;
+  color: var(--accent-color);
+  font-size: 1em;
+  transition: color 0.2s ease;
+}
+
+/* Fix icon colors explicitly */
 .project-links a i {
   font-size: 1.6em;
   transition: transform 0.2s ease;
 }
 
+/* Hover effect */
 .project-links a:hover i {
   transform: scale(1.2);
 }
 
+/* Icon-specific colors */
 .project-links a[title="GitHub"] i {
-  color: white; /* or #ffffff */
+  color: white;
+}
+
+.light-theme .project-links a[title="GitHub"] i {
+  color: black;
 }
 
 .project-links a[title="YouTube"] i {
   color: #FF0000;
 }
-.light-theme .project-links a[title="GitHub"] i {
-  color: #000;
+
+/* Prevent link color from applying to icons */
+.project-links a {
+  color: inherit;
+  text-decoration: none;
 }
+
 
 
