@@ -132,3 +132,32 @@ nav a:hover {
     margin: 10px 0;
   }
 }
+
+.project p {
+  position: relative;
+  max-height: 4.5em; /* 3 lines approx */
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  line-height: 1.5em;
+}
+
+.project p::after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-left: 10px;
+  background: linear-gradient(to right, transparent, var(--card-bg) 70%);
+}
+
+.project.expanded p {
+  max-height: none;
+}
+
+.read-more {
+  color: var(--link-color);
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 0.5em;
+  font-size: 0.9em;
+}

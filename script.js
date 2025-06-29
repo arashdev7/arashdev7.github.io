@@ -16,3 +16,8 @@ const toggleButton = document.getElementById('theme-toggle');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
     toggleButton.textContent = isLight ? '🌙' : '🌞';
   });
+  function toggleReadMore(button) {
+  const project = button.closest('.project');
+  project.classList.toggle('expanded');
+  button.textContent = project.classList.contains('expanded') ? "Read less" : "Read more";
+}
