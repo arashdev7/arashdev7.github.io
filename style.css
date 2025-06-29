@@ -260,4 +260,47 @@ nav a:hover {
   color: #0c9d58; /* darker green on hover */
 }
 
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8em;
+  margin-top: 1em;
+}
+
+.contact-links a {
+  text-decoration: none;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 500;
+}
+
+.contact-links a i {
+  font-size: 1.4em;
+  transition: transform 0.2s ease;
+}
+
+/* Icon Colors */
+.contact-links a[title="Email"] i {
+  color: #D44638; /* Gmail red */
+}
+
+.contact-links a[title="Twitter"] i {
+  color: #1DA1F2;
+}
+
+.contact-links a[title="Instagram"] i {
+  color: #E1306C;
+}
+
+.contact-links a[title="LinkedIn"] i {
+  color: #0077B5;
+}
+
+.contact-links a:hover i {
+  transform: scale(1.2);
+}
+
 
