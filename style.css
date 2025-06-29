@@ -122,9 +122,16 @@ nav a:hover {
 
 /* Responsive */
 @media (max-width: 600px) {
+  .projects-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .project {
     padding: 1em;
     font-size: 0.9em;
+    flex: 1 1 300px;
+    margin: 1em;
   }
 
   nav a, #theme-toggle {
