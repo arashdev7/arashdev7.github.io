@@ -154,43 +154,43 @@ nav a:hover {
   max-height: none;
 }
 
-.read-more {
-  color: var(--link-color);
-  cursor: pointer;
-  display: inline-block;
-  margin-top: 0.5em;
-  font-size: 0.9em;
-}
-
 .project .project-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.8em; /* space between lines */
-  margin-top: 1em;
-}
-
-.project .project-links a,
-.project .read-more {
-  margin: 0; /* remove individual spacing if any */
-}
-
-.project-links a i {
-  color: var(--link-color);
-  font-size: 1.4em;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.project-links a:hover i {
-  color: var(--accent-color);
-  transform: scale(1.2);
-}
-
-.project-links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.8em;
   margin-top: 1em;
 }
+
+.project .read-more {
+  cursor: pointer;
+  color: var(--link-color);
+  font-size: 1em;
+  transition: color 0.2s ease;
+}
+
+.project .read-more:hover {
+  color: var(--accent-color);
+}
+
+.project-links a i {
+  font-size: 1.6em;
+  transition: transform 0.2s ease;
+}
+
+.project-links a:hover i {
+  transform: scale(1.2);
+}
+
+.project-links a[title="GitHub"] i {
+  color: white; /* or #ffffff */
+}
+
+.project-links a[title="YouTube"] i {
+  color: #FF0000;
+}
+.light-theme .project-links a[title="GitHub"] i {
+  color: #000;
+}
+
 
