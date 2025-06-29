@@ -252,4 +252,12 @@ nav a:hover {
   color: #FF0000;
 }
 
+.project-links a[title="Google Drive"] i {
+  color: #34a853; /* Google's green tone */
+}
+
+.project-links a:hover[title="Google Drive"] i {
+  color: #0c9d58; /* darker green on hover */
+}
+
 

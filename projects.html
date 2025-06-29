@@ -44,7 +44,19 @@
             <div class="project">
       <h3>How to Train Your Dinosaur</h3>
       <p>
-        A fun simulation/game coded in Python. Uses basic AI for Dino behavior.
+        This project involves the re-creation of the classic Chrome Dinosaur game using
+        python and making AI play the game. We have used Supervised Learning as well as
+        Genetic Learning in parts to train the model.<br><br>
+        We first built a standalone game on python using the help of pygame so that we
+        could visually and manually play the game in order to collect training data.<br><br>
+        We then concatenated all the csv file(training data) into one file and fed this
+        to the train_simple_model.py, which is a very basic CNN model that
+        trains over the given data and saves the best model in a .pth file (say,
+        best_model.pth). <br><br>
+         This concludes the Supervised Learning part.
+        We them passed this best_model.pth file to the RL model,
+        Genetic_Model.py that uses Genetic algorithms such as - mutation, population
+
       </p>
       <div class="project-links">
         <span class="read-more" onclick="toggleReadMore(this)">Read more</span>
@@ -55,6 +67,10 @@
       <a href="https://youtu.be/-wfitVrluaw" target="_blank" title="YouTube">
         <i class="fab fa-youtube fa-lg"></i>
       </a>
+      <a href="https://drive.google.com/file/d/1q6Og0-YkX_pSzwb7onzble6Yqi8SqsT2/view?usp=sharing" target="_blank" title="Google Drive">
+        <i class="fab fa-google-drive fa-lg"></i>
+</a>
+
     </div>
 
     <div class="project">
