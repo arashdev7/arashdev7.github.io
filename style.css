@@ -253,11 +253,11 @@ nav a:hover {
 }
 
 .project-links a[title="Google Drive"] i {
-  color: #34a853; /* Google's green tone */
+  color: #34a853; 
 }
 
 .project-links a:hover[title="Google Drive"] i {
-  color: #0c9d58; /* darker green on hover */
+  color: #0c9d58; 
 }
 
 .contact-links {
@@ -288,7 +288,10 @@ nav a:hover {
 }
 
 .contact-links a[title="Twitter"] i {
-  color: #1DA1F2;
+  color: white;
+}
+.light-theme .contact-links a[title="Twitter"] i {
+  color: black;
 }
 
 .contact-links a[title="Instagram"] i {
@@ -296,7 +299,11 @@ nav a:hover {
 }
 
 .contact-links a[title="LinkedIn"] i {
-  color: #0077B5;
+  color: white;
+}
+
+.light-theme .contact-links a[title="Linkedin"] i {
+  color: black;
 }
 
 .contact-links a:hover i {
