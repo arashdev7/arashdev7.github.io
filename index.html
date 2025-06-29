@@ -24,16 +24,90 @@
 
             <div class="project">
                 <h3>RAVEDM 4x4x4</h3>
-                <p>An interactive LED cube controlled using shift registers. Created using Arduino and lots of soldering!</p>
-                <a href="https://github.com/arashdev7/RAVEDM-4X4X4" target="_blank">View on GitHub</a>
-            </div>
+                <p>RAVEDM or Rgb Audio Visualizing Electro Dancable Music 4x4x4 (I tried my best to fit it into the title)
+                   It is a 4x4x4 Green LED cube as of now. I couldn't make RGB possible as of now due to the high price of data transfer LEDS,
+                   and my inability to control 28 (8 for each color and 4 for ground) pins with PWM. Even MEGA has 12 PWMs as far as I can remember
+                   (fact check this), I would require 2 Megas and one UNO atleast or some other solution. I explained this project in the github page below.
+                </p>
+
+                <div class="project-links">
+                  <span class="read-more" onclick="toggleReadMore(this)">Read more</span>
+                </div>
+
+                  <a href="https://github.com/arashdev7/RAVEDM-4X4X4" target="_blank" title="GitHub">
+                  <i class="fab fa-github fa-lg"></i>
+                  </a>
+
+                  <a href="https://youtu.be/rdp_NPq-_nU" target="_blank" title="YouTube">
+                  <i class="fab fa-youtube fa-lg"></i>
+                  </a>
+  
+            </div>   
 
             <div class="project">
-            <h3>How to Train Your Dinosaur</h3>
-            <p>A fun simulation/game coded in Python. Uses basic AI for Dino behavior.</p>
-            <a href="https://github.com/ChiniKale/ChromeDinoGame" target="_blank">View on GitHub</a>
-            <a href="https://youtu.be/-wfitVrluaw">Live Demo</a>
+                  <h3>How to Train Your Dinosaur</h3>
+                  <p>
+                    This project involves the re-creation of the classic Chrome Dinosaur game using
+                    python and making AI play the game. We have used Supervised Learning as well as
+                    Genetic Learning in parts to train the model.<br><br>
+                    We first built a standalone game on python using the help of pygame so that we
+                    could visually and manually play the game in order to collect training data.<br><br>
+                    We then concatenated all the csv file(training data) into one file and fed this
+                    to the train_simple_model.py, which is a very basic CNN model that
+                    trains over the given data and saves the best model in a .pth file (say,
+                    best_model.pth). <br><br>
+                    This concludes the Supervised Learning part.
+                    We them passed this best_model.pth file to the RL model,
+                    Genetic_Model.py that uses Genetic algorithms such as - mutation, population
+
+                  </p>
+                  <div class="project-links">
+                    <span class="read-more" onclick="toggleReadMore(this)">Read more</span>
+                  </div>
+                  <a href="https://github.com/ChiniKale/ChromeDinoGame" target="_blank" title="GitHub">
+                  <i class="fab fa-github fa-lg"></i>
+                  </a>
+                  <a href="https://youtu.be/-wfitVrluaw" target="_blank" title="YouTube">
+                  <i class="fab fa-youtube fa-lg"></i>
+                  </a>
+                  <a href="https://drive.google.com/file/d/1q6Og0-YkX_pSzwb7onzble6Yqi8SqsT2/view?usp=sharing" target="_blank" title="Google Drive">
+                  <i class="fab fa-google-drive fa-lg"></i>
+                  </a>
+
             </div>
+
+              <div class="project">
+                <h3>Arch Linux Hyprland Setup</h3>
+                <p>
+                After spending the better part of the last 2 months ricing my laptop, I am finally done and satisfied — and I love my laptop too much now.  
+                <br><br>
+                The Linux iceberg was no joke but I’m happy I crashed into it.
+                <br><br>
+                <strong>System details:</strong><br>
+                Distro: Arch<br>
+                Desktop Environment: Hyprland Tiling Manager<br>
+                Display Manager (login): <a href="https://www.pling.com/p/2072906/" target="_blank">WarGames</a><br>
+                Side-bar: Eww bar<br>
+                Bluetooth: Bluetuith (TUI)<br>
+                Spotify: spotifyd + spotify_player + Glava<br>
+                Browser: Firefox with DuckDuckGo<br>
+                Text Editor: VS Code
+                <br><br>
+                Credit to <a href="https://github.com/hayyaoe/zenities/" target="_blank">@Hayaugh</a> for his rice, and his <a href="https://www.youtube.com/watch?v=X5o3bLyeIG4" target="_blank">video</a> which I used as a template for the rice (it's mostly his with a few modifications by me).  
+                <br><br>
+                Also credit to Maud-Lin on r/unixporn for the Minecraft GRUB theme: <a href="https://github.com/Lxtharia/minegrub-world" target="_blank">Minegrub World</a>.
+                <br><br>
+                I use Arch btw.<br>
+                <strong>SUUUIIIIIIIIIIIIIII</strong>
+                </p>
+                <div class="project-links">
+                  <span class="read-more" onclick="toggleReadMore(this)">Read more</span>
+                </div>
+                <a href="https://www.youtube.com/watch?v=npNQRiVDQKI&t=2s" target="_blank" title="YouTube">
+                  <i class="fab fa-youtube fa-lg"></i>
+                </a>
+              </div>
+
 
         </div>
 
