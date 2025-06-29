@@ -190,29 +190,6 @@ nav a:hover {
   transition: color 0.2s ease;
 }
 
-/* Fix icon colors explicitly */
-.project-links a i {
-  font-size: 1.6em;
-  transition: transform 0.2s ease;
-}
-
-/* Hover effect */
-.project-links a:hover i {
-  transform: scale(1.2);
-}
-
-/* Icon-specific colors */
-.project-links a[title="GitHub"] i {
-  color: white;
-}
-
-.light-theme .project-links a[title="GitHub"] i {
-  color: black;
-}
-
-.project-links a[title="YouTube"] i {
-  color: #FF0000;
-}
 
 /* Prevent link color from applying to icons */
 .project-links a {
@@ -220,5 +197,52 @@ nav a:hover {
   text-decoration: none;
 }
 
+/* Read More styling */
+.project .project-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8em;
+  margin-top: 1em;
+}
+
+.project .read-more {
+  cursor: pointer;
+  color: var(--accent-color);
+  font-size: 1em;
+  transition: color 0.2s ease;
+}
+.project > a {
+  display: inline-block;        /* allows styling while flowing inline */
+  margin-top: 0.5em;
+  margin-right: 1.0em;            /* spacing between icons if on the same line */
+  text-decoration: none;
+  color: inherit;               /* avoids link-blue */
+  vertical-align: middle;
+}
+
+/* Icon appearance */
+.project > a i {
+  font-size: 1.6em;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.project > a:hover i {
+  transform: scale(1.2);
+}
+
+/* Platform-specific colors */
+.project > a[title="GitHub"] i {
+  color: white;
+}
+
+.light-theme .project > a[title="GitHub"] i {
+  color: black;
+}
+
+.project > a[title="YouTube"] i {
+  color: #FF0000;
+}
 
 
