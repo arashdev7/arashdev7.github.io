@@ -12,7 +12,8 @@
 .light-theme {
   --bg-color: #fefefe;
   --text-color: #333;
-  --card-bg: #fff;
+  --card-bg: #ff
+  f;
   --accent-color: #e50d0d;
   --link-color: #0066cc;
   --nav-bg: #fff;
@@ -43,19 +44,19 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("stgate.svg");
+  background-image: url("stgate\ 1.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: -1;
   opacity: 1; /* adjust if needed */
-  transition: filter 0.4s ease;
+  transition: filter 0.4s ease, filter 0.4s ease;
 }
 
-/* 🌙 Invert the SVG only in dark mode */
-body:not(.light-theme)::before {
-  filter: invert(1);
+body.light-theme::before {
+  background-image: url("stgate.svg"); /* Light mode version */
 }
+
 
 
 @keyframes fadeIn {
