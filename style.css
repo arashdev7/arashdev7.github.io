@@ -164,10 +164,10 @@ nav a:hover {
 
 .project .project-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1em; /* adjust spacing between buttons */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em; /* space between lines */
   margin-top: 1em;
-  align-items: center;
 }
 
 .project .project-links a,
