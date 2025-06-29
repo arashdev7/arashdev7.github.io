@@ -44,7 +44,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("stgate\ 1.svg");
+  background-image: url("stgate.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -53,9 +53,10 @@ body::before {
   transition: filter 0.4s ease, filter 0.4s ease;
 }
 
-body.light-theme::before {
-  background-image: url("stgate.svg"); /* Light mode version */
+body:not(.light-theme)::before {
+  filter: invert(1);
 }
+
 
 
 
