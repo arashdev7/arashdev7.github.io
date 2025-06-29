@@ -262,7 +262,7 @@ nav a:hover {
 
 .contact-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   gap: 0.8em;
   margin-top: 1em;
