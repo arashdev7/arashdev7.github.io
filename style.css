@@ -11,7 +11,7 @@
 
 .light-theme {
   --bg-color: #fefefe;
-  --text-color: #333;
+  --text-color: black;
   --card-bg: rgba(255, 255, 255, 0.7);
   --accent-color: #e50d0d;
   --link-color: #0066cc;
@@ -36,28 +36,100 @@ body {
   z-index: 0;
 }
 
-body::before {
+body::before,
+body::after {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("stgate.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: -1;
-  opacity: 1; /* adjust if needed */
-  transition: filter 0.4s ease, filter 0.4s ease;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
 }
 
+/* Light mode background (visible in light theme) */
+body.light-theme::before {
+  background-image: url("stgate.svg");
+  opacity: 1;
+}
+
+body.light-theme::after {
+  background-image: url("stgate 1.svg");
+  opacity: 0;
+}
+
+/* Dark mode background (visible in dark theme) */
 body:not(.light-theme)::before {
-  filter: invert(1);
+  background-image: url("stgate.svg");
+  opacity: 0;
+}
+
+body:not(.light-theme)::after {
+  background-image: url("stgate 1.svg");
+  opacity: 1;
 }
 
 
+@font-face {
+  font-family: 'gasmask';
+  src: url('ggmu-fonts/Gasmask/Gasmask-XWAj.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'attackgraffiti';
+  src: url('ggmu-fonts/AttackGraffiti/AttackGraffiti-3zRBM.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'unique-spray';
+  src: url('ggmu-fonts/unique-spray/UniquelySprayed-PXOx.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'trip-denied';
+  src: url('ggmu-fonts/trip-denied/TripDeniedPersonalUseRegular-d98q6.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'shotgun-wedding';
+  src: url('ggmu-fonts/shotgun-wedding/Shotgunwedding-W0OE.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kingthing';
+  src: url('ggmu-fonts/kinthings/KingthingsExtortion-YMAa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'comback-home';
+  src: url('ggmu-fonts/comback-home/CombackHomeRegular-jEMd9.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'graffitipaint';
+  src: url('ggmu-fonts/graffitiPaint/Graffitipaintbrush-21Jv.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @keyframes fadeIn {
   from {
@@ -67,9 +139,24 @@ body:not(.light-theme)::before {
     opacity: 1;
   }
 } 
-h1, h2, h3 {
+h1 {
+  font-family: 'attackgraffiti', sans-serif;
   color: var(--accent-color);
+  font-size: 2.8em;
 }
+
+h2 {
+  font-family: 'attackgraffiti', sans-serif;
+  color: var(--accent-color);
+  font-size: 3.2em;
+}
+
+h3 {
+  font-family: 'attackgraffiti', sans-serif;
+  color: var(--accent-color);
+  font-size: 1.8em;
+}
+
 
 nav {
   background-color: var(--card-bg); /* same translucent bg as project */
@@ -321,9 +408,6 @@ nav a:hover {
 }
 
 .contact-links a[title="Twitter"] i {
-  color: white;
-}
-.light-theme .contact-links a[title="Twitter"] i {
   color: #64b5f6;
 }
 
@@ -332,12 +416,9 @@ nav a:hover {
 }
 
 .contact-links a[title="LinkedIn"] i {
-  color: white;
-}
-
-.light-theme .contact-links a[title="LinkedIn"] i {
   color: #3859ea;
 }
+
 
 .contact-links a:hover i {
   transform: scale(1.2);
@@ -345,31 +426,27 @@ nav a:hover {
 
 /* Reusable card style for contact/about */
 /* Frosted Glass Effect */
-.info-card {
-  background-color: rgba(30, 30, 30, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
-  padding: 0.6em 0.8em;
-  margin: 1em auto;
-  margin-left: 3.5em;
-  width: fit-content; /* 👈 shrink to fit content */
-  max-width: 90vw;    /* optional: prevent overflow on very small screens */
-  border-radius: 12px;
-  text-align: center;
-  transition: background-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-
-/* Light Theme variant */
-.light-theme .info-card {
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+.frosted-heading {
+  background-color: var(--card-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 0em 0.3em;
+  margin: 0.5em auto;
+  width: fit-content;
+  box-shadow: 0 4px 12px var(--box-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
 }
+
+/* Optional: Light theme variant */
+.light-theme .frosted-heading {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 .info-section {
   max-width: 600px;
@@ -412,10 +489,13 @@ nav a:hover {
 }
 
 .site-title {
-  font-weight: bold;
-  font-size: 1.5em;
+  font-family: 'Kingthing', sans-serif;
+  font-size: 2.5em;
+  font-weight: normal;
   color: var(--accent-color);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* optional graffiti vibe */
 }
+
 
 .institute-logos img {
   height: 48px; /* Increased size */
@@ -435,6 +515,15 @@ nav a:hover {
 body:not(.light-theme) .kittika-logo {
   filter: invert(1) brightness(0.9) contrast(1.1);
 }
+
+.name-red {
+  color: var(--accent-color);
+}
+
+.name-white {
+  color: var(--text-color);
+}
+
 
 
 
