@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGMU</title>
     <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+    <header class="top-bar">
+      <div class="site-title">ARASH DEV AHLAWAT</div>
+      <div class="institute-logos">
+      <img src="mutd.svg" alt="MUTD" />
+      <img src="kittika.svg" alt="Kittika" class="kittika-logo" />
+      <img src="iitb.svg" alt="IITB" />
+  </div>
+</header>
+
+    </head>
 <body>
-    <h1>GGMU</h1>
-    <p>ARASH DEV AHLAWAT</p>
 
     <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
-    <button id="theme-toggle">🌙</button>
+    <button id="theme-toggle">
+  <img id="theme-icon" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
+</button>
+
     </nav>
 
 
-    <h2 id="projects">Projects</h2>
+    
         <div class="projects-container">
-
+          <h2 id="projects">Projects</h2>
             <div class="project">
                 <h3>RAVEDM 4x4x4</h3>
                 <p>RAVEDM or Rgb Audio Visualizing Electro Dancable Music 4x4x4 (I tried my best to fit it into the title)
@@ -111,11 +120,15 @@
 
 
         </div>
+      <div class="projects-container">
+        <h2 id="about">About Me</h2>
+          <div class="project">
+              <p>Hello! I am Batman's brother🛌</p>
+          </div>
+      </div>
 
-
-<div class="info-section">
-    <h2 id="contact">Contact</h2>    
-        <div class="info-card">
+      <div class="projects-container">
+        <h2 id="contact">Contact</h2>   
             <div class="contact-links">
             <a href="mailto:debooahlawat25@gmail.com" title="Email">
             <i class="fas fa-envelope"></i> 
@@ -129,16 +142,9 @@
             <a href="https://www.linkedin.com/in/arash-dev-ahlawat-3255ba285" target="_blank" title="LinkedIn">
             <i class="fab fa-linkedin"></i> 
             </a>
-            </div>
         </div>
-</div>       
+      </div>         
 
-<div class="info-section">
-    <h2 id="about">About Me</h2>
-        <div class="info-card">
-            <p>Hello! I am Batman's brother🛌</p>
-        </div>
-</div>
 
     <script src="script.js"></script>
 </body>
