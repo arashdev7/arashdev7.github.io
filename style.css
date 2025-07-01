@@ -26,10 +26,10 @@
 
 body {
   animation: fadeIn 0.5s forwards;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'graffitipaint', Arial, Helvetica, sans-serif;
   color: var(--text-color);
   margin: 0;
-  padding: 2rem;
+  padding: 0.5rem 2rem 2rem;
   background-color: var(--bg-color);
   transition: background-color 0.5s ease, color 0.5s ease;
   position: relative;
@@ -79,7 +79,7 @@ body:not(.light-theme)::before {
 
 body:not(.light-theme)::after {
   background-image: url("stgate 1.svg");
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 
@@ -168,7 +168,7 @@ h3 {
 
 nav {
   background-color: var(--card-bg); /* same translucent bg as project */
-  padding: 0.3em;
+  padding: 0.8em;
   text-align: center;
   box-shadow: 0 2px 5px var(--box-shadow);
   position: sticky;
@@ -178,7 +178,7 @@ nav {
   align-items: center;
 
   border-radius: 12px;         /* rounded corners */
-  margin: 0.5em auto;          /* spacing around nav bar */
+  margin: -50px auto;          /* spacing around nav bar */
   width: fit-content;          /* shrink-wrap nav if desired */
   backdrop-filter: blur(8px);  /* optional: adds glassy blur */
 }
@@ -484,7 +484,6 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 1em;
-
   /* Removed visual box styling */
   background: none;
   box-shadow: none;
@@ -492,7 +491,7 @@ nav a:hover {
   backdrop-filter: none;
 
   position: sticky;
-  top: 0;
+  top: 0px;
   z-index: 1000;
 }
 
@@ -538,12 +537,17 @@ body:not(.light-theme) .kittika-logo {
   display: inline-block;
   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.4)); /* graffiti glow vibe */
   transition: transform 0.3s ease;
+  margin-top: 2em;
 }
 
 .svg-title:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
+.svg-section-title {
+  text-align: center;
+  transform: translateX(-45px);
+}
 
 
 
