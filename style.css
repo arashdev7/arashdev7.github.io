@@ -52,10 +52,18 @@ body::after {
   pointer-events: none;
 }
 
+body::before {
+  z-index: -2;
+}
+
+body::after {
+  z-index: -1;
+}
+
 /* Light mode background (visible in light theme) */
 body.light-theme::before {
   background-image: url("stgate.svg");
-  opacity: 1;
+  opacity: 0.8;
 }
 
 body.light-theme::after {
@@ -71,7 +79,7 @@ body:not(.light-theme)::before {
 
 body:not(.light-theme)::after {
   background-image: url("stgate 1.svg");
-  opacity: 1;
+  opacity: 0.8;
 }
 
 
@@ -522,6 +530,18 @@ body:not(.light-theme) .kittika-logo {
 
 .name-white {
   color: var(--text-color);
+}
+
+.svg-title {
+  height: 270px; /* Adjust size as needed */
+  max-width: 300%;
+  display: inline-block;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.4)); /* graffiti glow vibe */
+  transition: transform 0.3s ease;
+}
+
+.svg-title:hover {
+  transform: scale(1.05);
 }
 
 
