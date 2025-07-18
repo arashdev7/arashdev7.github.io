@@ -3,7 +3,7 @@
   --bg-color: #121212;
   --text-color: #f5f5f5;
   --card-bg: rgba(30, 30, 30, 0.8);
-  --accent-color: #e50d0d;
+  --accent-color: #ee3131;
   --link-color: #64b5f6;
   --nav-bg: #1e1e1e;
   --box-shadow: rgba(0, 0, 0, 0.6);
@@ -26,7 +26,7 @@
 
 body {
   animation: fadeIn 0.5s forwards;
-  font-family: 'graffitipaint', Arial, Helvetica, sans-serif;
+  font-family: 'playpans', Arial, Helvetica, sans-serif;
   color: var(--text-color);
   margin: 0;
   padding: 0.5rem 2rem 2rem;
@@ -139,6 +139,27 @@ body:not(.light-theme)::after {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'playpans';
+  src: url('ggmu-fonts/playpans/PlaypenSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'laqcuer';
+  src: url('ggmu-fonts/Lacquer/Lacquer-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'codex';
+  src: url('ggmu-fonts/Codex/Codex\ LT\ Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -154,9 +175,9 @@ h1 {
 }
 
 h2 {
-  font-family: 'attackgraffiti', sans-serif;
+  font-family: 'laqcuer', sans-serif;
   color: var(--accent-color);
-  font-size: 3.2em;
+  font-size: 2.0em;
 }
 
 h3 {
@@ -164,6 +185,100 @@ h3 {
   color: var(--accent-color);
   font-size: 1.8em;
 }
+
+/* --- Default nav bar --- */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  background-color: var(--card-bg);
+  padding: 0.8em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 12px;
+  margin: -75px auto;
+  width: fit-content;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 5px var(--box-shadow);
+  font: normal 1.2em 'trip-denied', sans-serif ;
+}
+
+/* --- Sticky mobile button --- */
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: fixed;
+    bottom: 1.2em;
+    right: 1.2em;
+    z-index: 1500;
+    background-color: var(--card-bg);
+    border: none;
+    padding: 0.6em 0.8em;
+    font-size: 1.5em;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px var(--box-shadow);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+  }
+}
+
+/* --- Sidebar styles --- */
+.mobile-sidebar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: var(--card-bg);
+    backdrop-filter: blur(8px);
+    box-shadow: 2px 0 10px var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em 1em;
+    z-index: 2000;
+    transition: left 0.3s ease;
+  }
+
+  .mobile-sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-theme-toggle {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 1em;
+  }
+
+  .close-sidebar {
+    align-self: flex-end;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1em;
+    color: var(--accent-color);
+  }
+}
+
 
 
 nav {
@@ -178,7 +293,7 @@ nav {
   align-items: center;
 
   border-radius: 12px;         /* rounded corners */
-  margin: -50px auto;          /* spacing around nav bar */
+  margin: 0px auto;          /* spacing around nav bar */
   width: fit-content;          /* shrink-wrap nav if desired */
   backdrop-filter: blur(8px);  /* optional: adds glassy blur */
 }
@@ -187,13 +302,16 @@ nav {
 nav a {
   margin: 0 25px;
   text-decoration: none;
-  color: var(--accent-color);
+  color: var(--text-color);
   font-weight: bold;
   font-size: 1.1em;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.mobile-sidebar a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 #theme-toggle {
@@ -387,6 +505,11 @@ nav a:hover {
 .project-links a:hover[title="Google Drive"] i {
   color: #0c9d58; 
 }
+
+.mobile-menu-btn {
+  color: var(--text-color); 
+}
+
 
 .contact-links {
   display: flex;

@@ -57,24 +57,40 @@
 </div>
 </header>
 
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-      <a href="Arash_CV-3.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-    <button id="theme-toggle">
-  <img id="theme-icon" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
-</button>
+<!-- Top nav (visible on large screens only) -->
+<nav class="navbar">
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="projects.html">PROJECTs</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="Arash_CV-3.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+  <button id="theme-toggle" class="top-theme-toggle">
+    <img id="theme-icon" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
+  </button>
+</nav>
 
-    </nav>
+<!-- Sticky mobile button -->
+<button id="mobile-menu-btn" class="mobile-menu-btn">☰</button>
+
+<!-- Sidebar for small screens -->
+<div id="mobile-sidebar" class="mobile-sidebar">
+  <button class="close-sidebar">&times;</button>
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="Arash_CV-3.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+  <button id="theme-toggle-sidebar" class="sidebar-theme-toggle">
+    <img id="theme-icon-sidebar" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
+  </button>
+</div>
 
 
     
         <div class="projects-container">
               <img src="t-svg/p-l2.svg" alt="Projects Title" class="svg-title">
             <div class="project">
-                <h3>RAVEDM 4x4x4</h3>
+                <h2>RAVEDM 4x4x4</h2>
                 <p>RAVEDM or Rgb Audio Visualizing Electro Dancable Music 4x4x4 (I tried my best to fit it into the title)
                    It is a 4x4x4 Green LED cube as of now. I couldn't make RGB possible as of now due to the high price of data transfer LEDS,
                    and my inability to control 28 (8 for each color and 4 for ground) pins with PWM. Even MEGA has 12 PWMs as far as I can remember
@@ -96,7 +112,7 @@
             </div>   
 
             <div class="project">
-                  <h3>How to Train Your Dinosaur</h3>
+                  <h2>How to Train Your Dinosaur</h2>
                   <p>
                     This project involves the re-creation of the classic Chrome Dinosaur game using
                     python and making AI play the game. We have used Supervised Learning as well as
@@ -128,7 +144,7 @@
             </div>
 
               <div class="project">
-                <h3>Arch Linux Hyprland Setup</h3>
+                <h2>Arch Linux Hyprland Setup</h2>
                 <p>
                 After spending the better part of the last 2 months ricing my laptop, I am finally done and satisfied — and I love my laptop too much now.  
                 <br><br>
