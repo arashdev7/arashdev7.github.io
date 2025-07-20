@@ -160,6 +160,14 @@ body:not(.light-theme)::after {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'earwig';
+  src: url('ggmu-fonts/earwig/earwig\ factory\ rg.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -201,7 +209,7 @@ h3 {
   width: fit-content;
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 5px var(--box-shadow);
-  font: normal 1.2em 'trip-denied', sans-serif ;
+  font: normal 1.2em 'laqcuer', sans-serif ;
 }
 
 /* --- Sticky mobile button --- */
@@ -248,6 +256,7 @@ h3 {
     box-shadow: 2px 0 10px var(--box-shadow);
     display: flex;
     flex-direction: column;
+    font: normal 1.2em 'laqcuer', sans-serif ;
     gap: 1em;
     padding: 2em 1em;
     z-index: 2000;
@@ -309,7 +318,7 @@ nav a {
 
 .mobile-sidebar a {
   text-decoration: none;
-  color: var(--accent-color);
+  color: var(--text-color);
   font-weight: bold;
   font-size: 1.1em;
 }
