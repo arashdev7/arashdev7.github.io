@@ -655,6 +655,20 @@ body:not(.light-theme) .kittika-logo {
   filter: invert(1) brightness(0.9) contrast(1.1);
 }
 
+.iitb-logo {
+  transition: filter 0.4s ease;
+}
+
+body.light-theme .iitb-logo {
+  filter: brightness(0) saturate(100%) invert(0);
+}
+
+body:not(.light-theme) .iitb-logo {
+  filter: brightness(0) saturate(100%) invert(1);
+}
+
+
+
 .name-red {
   color: var(--accent-color);
 }

@@ -15,12 +15,21 @@ function updateIcons(isLight) {
   if (sidebarIcon) sidebarIcon.src = src;
 }
 
+// Utility to set projects title image
+function updateProjectImage(isLight) {
+  const projectTitleImg = document.getElementById('projects-title');
+  if (projectTitleImg) {
+    projectTitleImg.src = isLight ? 't-svg/cm-l.svg' : 't-svg/cm-d.svg';
+  }
+}
+
 // Set initial theme
 const isLight = savedTheme === 'light' || (!savedTheme && !prefersDark);
 if (isLight) {
   document.body.classList.add('light-theme');
 }
 updateIcons(isLight);
+updateProjectImage(isLight);
 
 // Theme toggle function
 function toggleTheme() {
@@ -28,6 +37,7 @@ function toggleTheme() {
   const isLightNow = document.body.classList.contains('light-theme');
   localStorage.setItem('theme', isLightNow ? 'light' : 'dark');
   updateIcons(isLightNow);
+  updateProjectImage(isLightNow); 
 }
 
 // Attach listeners
