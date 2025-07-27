@@ -53,8 +53,8 @@
         <img src="kittika.svg" alt="Kittika Logo" class="kittika-logo" />
       </a>
       <a href="https://iitb.ac.in" target="_blank" rel="noopener noreferrer">
-        <img src="iitb.svg" alt="IITB Logo" />
-      </a>
+    <img src="iitb.svg" alt="IITB Logo" class="iitb-logo" />
+  </a>
     </div>
 </header>
 
@@ -62,7 +62,6 @@
       <a href="index.html">HOME</a>
       <a href="about.html">ABOUT</a>
       <a href="projects.html">PROJECTs</a>
-      <a href="contact.html">CONTACT</a>
       <a href="Arash_CV-3.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       <button id="theme-toggle" class="top-theme-toggle">
         <img id="theme-icon" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
@@ -78,18 +77,22 @@
       <a href="index.html">HOME</a>
       <a href="about.html">ABOUT</a>
       <a href="projects.html">PROJECTS</a>
-      <a href="contact.html">CONTACT</a>
       <a href="Arash_CV-3.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       <button id="theme-toggle-sidebar" class="sidebar-theme-toggle">
         <img id="theme-icon-sidebar" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
       </button>
     </div>
 
-    
-
-          <div class="projects-container">
-                <img src="t-svg/p-l2.svg" alt="Projects Title" class="svg-title">
-        <div class="projects-container">
+            <div class="projects-container">
+          <div class="svg-section-title">
+          <img src="t-svg/am-l.svg"
+              <img id="projects-title"
+                  src="t-svg/p-l2.svg"
+                  data-light="t-svg/p-l2.svg"
+                  data-dark="t-svg/p-d.svg"
+                  alt="Projects Title"
+                  class="svg-title" />
+            </div>      
 
             <div class="project">
                 <h2>RAVEDM 4x4x4</h2>
@@ -172,9 +175,6 @@
                 <div class="project-links">
                   <span class="read-more" onclick="toggleReadMore(this)">Read more</span>
                 </div>
-                <a href="https://github.com/arashdev7/arch-backup" target="_blank" title="GitHub">
-                  <i class="fab fa-github fa-lg"></i>
-                  </a>
                 <a href="https://www.youtube.com/watch?v=npNQRiVDQKI&t=2s" target="_blank" title="YouTube">
                   <i class="fab fa-youtube fa-lg"></i>
                 </a>
@@ -182,7 +182,9 @@
 
 
         </div>
+    
 
+          
   <script src="script.js"></script> 
 </body>
 </html>

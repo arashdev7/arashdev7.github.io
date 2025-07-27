@@ -564,6 +564,43 @@ nav a {
   transform: scale(1.2);
 }
 
+.hover-contact {
+  position: relative;
+  display: inline-block;
+}
+
+.contact-popup {
+  display: none;
+  position: absolute;
+  top: -10%;
+  left: 58%;
+  transform: translateX(-50%);
+  background: var(--popup-bg, #222);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.hover-contact:hover .contact-popup {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.contact-popup a {
+  color: white;
+  font-size: 30px;
+  transition: transform 0.2s ease;
+}
+
+.contact-popup a:hover {
+  transform: scale(1.2);
+}
+
+
 /* Reusable card style for contact/about */
 /* Frosted Glass Effect */
 .frosted-heading {
@@ -692,8 +729,65 @@ body:not(.light-theme) .iitb-logo {
 
 .svg-section-title {
   text-align: center;
-  transform: translateX(-45px);
+  transform: translateX(0px);
+}
+
+.svg-section-title img {
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Optional: use this for vertical centering too */
+  height: 35vh;       /* Optional: for full page vertical centering */
+  text-align: center;
+}
+
+.svg-section-title:hover img {
+  filter: drop-shadow(0 0 5px #ff1a1a)
+          drop-shadow(0 0 10px #ff1a1a)
+          drop-shadow(0 0 20px #ff1a1a);
+  transform: scale(1.02);
+}
+
+.svg-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.01rem;
+  margin-top: 4rem;
+  flex-direction: row;
+}
+
+.svg-title {
+  width: 500px;  /* Increase scaling */
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.svg-cv {
+  width: 300px;  /* Increase scaling */
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* 25% smaller */
+}
+
+.svg-title:hover {
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .svg-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .svg-title {
+    width: 180px;  /* Slightly smaller for mobile */
+  }
+}
 

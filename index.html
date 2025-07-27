@@ -62,7 +62,6 @@
   <a href="index.html">HOME</a>
   <a href="about.html">ABOUT</a>
   <a href="projects.html">PROJECTs</a>
-  <a href="contact.html">CONTACT</a>
   <a href="Arash_CV-3.pdf" target="_blank" rel="noopener noreferrer">CV</a>
   <button id="theme-toggle" class="top-theme-toggle">
     <img id="theme-icon" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
@@ -78,131 +77,77 @@
   <a href="index.html">HOME</a>
   <a href="about.html">ABOUT</a>
   <a href="projects.html">PROJECTS</a>
-  <a href="contact.html">CONTACT</a>
   <a href="Arash_CV-3.pdf" target="_blank" rel="noopener noreferrer">CV</a>
   <button id="theme-toggle-sidebar" class="sidebar-theme-toggle">
     <img id="theme-icon-sidebar" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
   </button>
 </div>
 
+<div class="projects-container">
+  <div class="svg-row">
+    <div class="svg-section-title hover-contact">
 
-    
-        <div class="projects-container">
-              <img src="t-svg/p-l2.svg" alt="Projects Title" class="svg-title">
-            <div class="project">
-                <h2>RAVEDM 4x4x4</h2>
-                <p>RAVEDM or Rgb Audio Visualizing Electro Dancable Music 4x4x4 (I tried my best to fit it into the title)
-                   It is a 4x4x4 Green LED cube as of now. I couldn't make RGB possible as of now due to the high price of data transfer LEDS,
-                   and my inability to control 28 (8 for each color and 4 for ground) pins with PWM. Even MEGA has 12 PWMs as far as I can remember
-                   (fact check this), I would require 2 Megas and one UNO atleast or some other solution. I explained this project in the github page below.
-                </p>
-
-                <div class="project-links">
-                  <span class="read-more" onclick="toggleReadMore(this)">Read more</span>
-                </div>
-
-                  <a href="https://github.com/arashdev7/RAVEDM-4X4X4" target="_blank" title="GitHub">
-                  <i class="fab fa-github fa-lg"></i>
-                  </a>
-
-                  <a href="https://youtu.be/rdp_NPq-_nU" target="_blank" title="YouTube">
-                  <i class="fab fa-youtube fa-lg"></i>
-                  </a>
-  
-            </div>   
-
-            <div class="project">
-                  <h2>How to Train Your Dinosaur</h2>
-                  <p>
-                    This project involves the re-creation of the classic Chrome Dinosaur game using
-                    python and making AI play the game. We have used Supervised Learning as well as
-                    Genetic Learning in parts to train the model.<br><br>
-                    We first built a standalone game on python using the help of pygame so that we
-                    could visually and manually play the game in order to collect training data.<br><br>
-                    We then concatenated all the csv file(training data) into one file and fed this
-                    to the train_simple_model.py, which is a very basic CNN model that
-                    trains over the given data and saves the best model in a .pth file (say,
-                    best_model.pth). <br><br>
-                    This concludes the Supervised Learning part.
-                    We them passed this best_model.pth file to the RL model,
-                    Genetic_Model.py that uses Genetic algorithms such as - mutation, population
-
-                  </p>
-                  <div class="project-links">
-                    <span class="read-more" onclick="toggleReadMore(this)">Read more</span>
-                  </div>
-                  <a href="https://github.com/ChiniKale/ChromeDinoGame" target="_blank" title="GitHub">
-                  <i class="fab fa-github fa-lg"></i>
-                  </a>
-                  <a href="https://youtu.be/-wfitVrluaw" target="_blank" title="YouTube">
-                  <i class="fab fa-youtube fa-lg"></i>
-                  </a>
-                  <a href="https://drive.google.com/file/d/1q6Og0-YkX_pSzwb7onzble6Yqi8SqsT2/view?usp=sharing" target="_blank" title="Google Drive">
-                  <i class="fab fa-google-drive fa-lg"></i>
-                  </a>
-
-            </div>
-
-              <div class="project">
-                <h2>Arch Linux Hyprland Setup</h2>
-                <p>
-                After spending the better part of the last 2 months ricing my laptop, I am finally done and satisfied — and I love my laptop too much now.  
-                <br><br>
-                The Linux iceberg was no joke but I’m happy I crashed into it.
-                <br><br>
-                <strong>System details:</strong><br>
-                Distro: Arch<br>
-                Desktop Environment: Hyprland Tiling Manager<br>
-                Display Manager (login): <a href="https://www.pling.com/p/2072906/" target="_blank">WarGames</a><br>
-                Side-bar: Eww bar<br>
-                Bluetooth: Bluetuith (TUI)<br>
-                Spotify: spotifyd + spotify_player + Glava<br>
-                Browser: Firefox with DuckDuckGo<br>
-                Text Editor: VS Code
-                <br><br>
-                Credit to <a href="https://github.com/hayyaoe/zenities/" target="_blank">@Hayaugh</a> for his rice, and his <a href="https://www.youtube.com/watch?v=X5o3bLyeIG4" target="_blank">video</a> which I used as a template for the rice (it's mostly his with a few modifications by me).  
-                <br><br>
-                Also credit to Maud-Lin on r/unixporn for the Minecraft GRUB theme: <a href="https://github.com/Lxtharia/minegrub-world" target="_blank">Minegrub World</a>.
-                <br><br>
-                I use Arch btw.<br>
-                <strong>SUUUIIIIIIIIIIIIIII</strong>
-                </p>
-                <div class="project-links">
-                  <span class="read-more" onclick="toggleReadMore(this)">Read more</span>
-                </div>
-                <a href="https://www.youtube.com/watch?v=npNQRiVDQKI&t=2s" target="_blank" title="YouTube">
-                  <i class="fab fa-youtube fa-lg"></i>
-                </a>
-              </div>
+    <img src="t-svg/p-l2.svg"
+         data-light="t-svg/p-l2.svg"
+         data-dark="t-svg/p-d.svg"
+         alt="Projects Title"
+         class="svg-title"
+         onclick="location.href='projects.html'">
+    </div>     
 
 
-        </div>
-      <div class="projects-container">
-        <img src="t-svg/am-l.svg" alt="Projects Title" class="svg-title">
-          <div class="project">
-              <p>Hello! I am Batman's brother🛌</p>
-          </div>
+    <div class="svg-section-title hover-contact">
+    <img src="t-svg/am-l.svg"
+         data-light="t-svg/am-d.svg"
+         data-dark="t-svg/am-l.svg"
+         alt="About Title"
+         class="svg-title"
+         onclick="location.href='about.html'">
+    </div>     
+
+    <div class="svg-section-title hover-contact">
+      <img src="t-svg/cm-l.svg"
+           data-light="t-svg/cm-l.svg"
+           data-dark="t-svg/cm-d.svg"
+           alt="Contact Title"
+           class="svg-title" />
+      <div class="contact-popup">
+        <a href="mailto:debooahlawat25@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://x.com/AhlawatArashDev" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/ahlawatarashdev" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/arash-dev-ahlawat-3255ba285" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
+    </div>
 
-      <div class="projects-container">
-        <div class="svg-section-title">
-          <img src="t-svg/cm-l.svg" alt="Projects Title" class="svg-title" id="projects-title"> 
-        </div>  
-              <div class="contact-links">
-              <a href="mailto:debooahlawat25@gmail.com" title="Email">
-              <i class="fas fa-envelope"></i> 
-              </a>
-              <a href="https://x.com/AhlawatArashDev" target="_blank" title="Twitter">
-              <i class="fab fa-twitter"></i> 
-              </a>
-              <a href="https://www.instagram.com/ahlawatarashdev" target="_blank" title="Instagram">
-              <i class="fab fa-instagram"></i> 
-              </a>
-              <a href="https://www.linkedin.com/in/arash-dev-ahlawat-3255ba285" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin"></i> 
-              </a>
-          </div>
-        </div>         
+    <div class="svg-section-title hover-contact">
+      <img src="t-svg/tt-l.svg"
+          data-light="t-svg/tt-d.svg"
+          data-dark="t-svg/tt-l.svg"
+          alt="About Title"
+          class="svg-title"
+          onclick="location.href='https://docs.google.com/spreadsheets/d/e/2PACX-1vS9SO6VI7WINzwtsMOINJmTrIZ2-vb2YkzaewVXfDvGU2XA28hfB3EnjaiRj5UCiNhqEnr-5-MN6ROK/pubhtml?gid=0&single=true'">
+    </div>
+
+    <div class="svg-section-title hover-contact">
+      <a href="Arash_CV-3.pdf" target="_blank">
+        <img src="t-svg/tt-l.svg"
+            data-light="t-svg/cv-l.svg"
+            data-dark="t-svg/cv-d.svg"
+            alt="CV"
+            class="svg-title svg-cv">
+      </a>
+    </div>
+
+ 
+
+  </div>
+</div>
+
+
+
+
+
+     
 
 
     <script src="script.js"></script>

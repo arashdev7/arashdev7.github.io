@@ -16,11 +16,11 @@ function updateIcons(isLight) {
 }
 
 // Utility to set projects title image
-function updateProjectImage(isLight) {
-  const projectTitleImg = document.getElementById('projects-title');
-  if (projectTitleImg) {
-    projectTitleImg.src = isLight ? 't-svg/cm-l.svg' : 't-svg/cm-d.svg';
-  }
+function updateThemeImages(isLight) {
+  const images = document.querySelectorAll('img[data-light][data-dark]');
+  images.forEach(img => {
+    img.src = isLight ? img.dataset.light : img.dataset.dark;
+  });
 }
 
 // Set initial theme
@@ -29,7 +29,7 @@ if (isLight) {
   document.body.classList.add('light-theme');
 }
 updateIcons(isLight);
-updateProjectImage(isLight);
+updateThemeImages(isLight);
 
 // Theme toggle function
 function toggleTheme() {
@@ -37,7 +37,7 @@ function toggleTheme() {
   const isLightNow = document.body.classList.contains('light-theme');
   localStorage.setItem('theme', isLightNow ? 'light' : 'dark');
   updateIcons(isLightNow);
-  updateProjectImage(isLightNow); 
+  updateThemeImages(isLightNow); 
 }
 
 // Attach listeners
