@@ -223,8 +223,8 @@ h3 {
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed !important;
-    height: 100vh !important;
-    width: 100vw !important;
+    height: 200vh !important;
+    width: 200vw !important;
   }  
 
   .navbar {
