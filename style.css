@@ -773,7 +773,34 @@ body:not(.light-theme) .iitb-logo {
   width: 300px;  /* Increase scaling */
   height: auto;
   transition: transform 0.3s ease;
-  cursor: pointer; /* 25% smaller */
+  cursor: pointer; /* 40% smaller */
+}
+
+.svg-projects {
+  width: 500px;  /* Increase scaling */
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.svg-about-me {
+  width: 500px;  /* Increase scaling */
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.svg-contact-me {
+  width: 500px;  /* Increase scaling */
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.svg-timetable {
+  width: 500px;  /* Increase scaling */
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .svg-title:hover {
@@ -783,11 +810,79 @@ body:not(.light-theme) .iitb-logo {
 @media (max-width: 768px) {
   .svg-row {
     flex-direction: column;
-    gap: 2rem;
+    gap: 10px;
   }
 
   .svg-title {
-    width: 180px;  /* Slightly smaller for mobile */
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .svg-section-title:hover .svg-title {
+    transform: translateX(0) scale(1.05);
+  }
+
+  .svg-projects {
+    width: 130%;
+    max-width: 1060px;
+    margin-top: -50px;
+    margin-bottom: -100px;
+    transform: translateX(-90px);
+    transition: transform 0.3s ease;
+  }
+
+  .svg-section-title:hover .svg-projects {
+    transform: translateX(-90px) scale(1.1);
+  }
+
+  .svg-about-me {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    transform: translateX(20px);
+    transition: transform 0.3s ease;
+  }
+
+  .svg-section-title:hover .svg-about-me {
+    transform: translateX(20px) scale(1.1);
+  }
+
+  .svg-contact-me {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    transform: translateX(-50px);
+    transition: transform 0.3s ease;
+  }
+
+  .svg-section-title:hover .svg-contact-me {
+    transform: translateX(-50px) scale(1.1);
+  }
+
+  .svg-timetable {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .svg-section-title:hover .svg-timetable {
+    transform: translateX(0) scale(1.1);
+  }
+
+  .svg-cv {
+    width: 80%;
+    max-width: 1060px;
+    margin: 0 auto;
+    transform: translateX(0px);
+    transition: transform 0.3s ease;
+  }
+
+  .svg-section-title:hover .svg-cv {
+    transform: translateX(0px) scale(1.1);
   }
 }
-
