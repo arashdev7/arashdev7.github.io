@@ -220,11 +220,13 @@ h3 {
 @media (max-width: 768px) {
   body::before,
   body::after {
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    height: 100vh !important;
+    width: 100vw !important;
+  }  
+
   .navbar {
     display: none;
   }
