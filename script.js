@@ -68,3 +68,20 @@ if (sidebarToggleBtn) sidebarToggleBtn.addEventListener('click', toggleTheme);
       sidebar.classList.remove('active');
     });
   });
+
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  }, {
+    threshold: 0.6  // Only when 60% visible
+  });
+
+  reveals.forEach(el => observer.observe(el));

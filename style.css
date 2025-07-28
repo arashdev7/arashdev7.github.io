@@ -572,8 +572,8 @@ nav a {
 .contact-popup {
   display: none;
   position: absolute;
-  top: -10%;
-  left: 58%;
+  top: -25%;
+  left: 50%;
   transform: translateX(-50%);
   background: var(--popup-bg, #222);
   color: white;
@@ -885,4 +885,7 @@ body:not(.light-theme) .iitb-logo {
   .svg-section-title:hover .svg-cv {
     transform: translateX(0px) scale(1.1);
   }
+
+  
+
 }
