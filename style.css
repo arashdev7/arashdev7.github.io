@@ -792,7 +792,7 @@ body:not(.light-theme) .iitb-logo {
   cursor: pointer;
 }
 .svg-about-me {
-  width: 500px;  /* Increase scaling */
+  width: 580px;  /* Increase scaling */
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
