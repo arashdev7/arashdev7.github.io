@@ -37,13 +37,13 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Arash Dev Ahlawat - Internet Hub</title>
     </head>
-<body>
+<body class="home-page">
   <header class="top-bar">
-      <div class="site-title">
-          <span class="name-white">ARASH</span>
-          <span class="name-white">DEV</span><br>
-          <span class="name-white">AHLAWAT</span>
-      </div>
+    <a href="index.html" class="site-title">
+      <span class="name-white">ARASH</span>
+      <span class="name-white">DEV</span><br>
+      <span class="name-white">AHLAWAT</span>
+    </a>
       <div class="institute-logos">
   <a href="https://www.youtube.com/watch?v=zKH5sXihT2w" target="_blank" rel="noopener noreferrer">
     <img src="mutd.svg" alt="MUTD Logo" />
@@ -57,19 +57,13 @@
 </div>
 </header>
 
-<!-- Top nav (visible on large screens only) -->
-<nav class="navbar">
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="projects.html">PROJECTs</a>
-  <a href="Arash_CV-3.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-  <button id="theme-toggle" class="top-theme-toggle">
-    <img id="theme-icon" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
-  </button>
-</nav>
 
 <!-- Sticky mobile button -->
 <button id="mobile-menu-btn" class="mobile-menu-btn">☰</button>
+
+<button id="theme-toggle-sidebar" class="theme-fab">
+  <img id="theme-icon-sidebar" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
+</button>
 
 <!-- Sidebar for small screens -->
 <div id="mobile-sidebar" class="mobile-sidebar">
@@ -78,41 +72,94 @@
   <a href="about.html">ABOUT</a>
   <a href="projects.html">PROJECTS</a>
   <a href="Arash_CV-3.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-  <button id="theme-toggle-sidebar" class="sidebar-theme-toggle">
-    <img id="theme-icon-sidebar" src="rdev.svg" alt="Toggle Theme" width="24" height="24">
-  </button>
+  <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS9SO6VI7WINzwtsMOINJmTrIZ2-vb2YkzaewVXfDvGU2XA28hfB3EnjaiRj5UCiNhqEnr-5-MN6ROK/pubhtml?gid=0&single=true" target="_blank" rel="noopener noreferrer">TIMETABLE</a>
+  <a href="blogs.html">BLOG</a>
+
+  <!-- CONTACT ME popup trigger -->
+  <div class="click-contact-wrapper">
+    <a href="#" id="contact-popup-trigger">CONTACT ME</a>
+    <div class="contact-popup" id="contact-popup">
+      <a href="mailto:debooahlawat25@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://x.com/AhlawatArashDev" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/ahlawatarashdev" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/arash-dev-ahlawat-3255ba285" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <div class="sidebar-footer">
+  &copy; 2025 Arash Dev Ahlawat
 </div>
+
+</div>
+
 
 <div class="projects-container">
   <div class="svg-row">
     <div class="svg-section-title hover-contact">
 
-  <div class="svg-section-title reveal">    
-    <img src="t-svg/p-l2.svg"
-         data-light="t-svg/p-l2.svg"
-         data-dark="t-svg/p-d.svg"
-         alt="Projects Title"
-         class="svg-title svg-projects"
-         onclick="location.href='projects.html'">
-    </div>    
-  </div>   
+      <div class="svg-section-title reveal">    
+        <img src="t-svg/p-l2.svg"
+          data-light="t-svg/p-l2.svg"
+          data-dark="t-svg/p-d.svg"
+          alt="Projects Title"
+          class="svg-title svg-projects"
+          onclick="location.href='projects.html'">
+      </div>    
+    </div>   
 
 
-    <div class="svg-section-title hover-contact">
+  <div class="svg-section-title hover-contact">
      
-  <div class="svg-section-title reveal">   
-    <img src="t-svg/am-l.svg"
-         data-light="t-svg/am-d.svg"
-         data-dark="t-svg/am-l.svg"
-         alt="About Title"
-         class="svg-title svg-about-me"
-         onclick="location.href='about.html'">
+    <div class="svg-section-title reveal">   
+      <img src="t-svg/am-l.svg"
+          data-light="t-svg/am-d.svg"
+          data-dark="t-svg/am-l.svg"
+          alt="About Title"
+          class="svg-title svg-about-me"
+          onclick="location.href='about.html'">
     </div>  
-  </div>     
+  </div>    
+  
+  <div class="svg-section-title hover-contact">
 
-    <div class="svg-section-title hover-contact">
+    <div class="svg-section-title reveal">    
+      <a href="Arash_CV-3.pdf" target="_blank">
+        <img src="t-svg/tt-l.svg"
+            data-light="t-svg/cv-l.svg"
+            data-dark="t-svg/cv-d.svg"
+            alt="CV"
+            class="svg-title svg-cv">
+      </a>
+    </div>
+  </div>
 
-  <div class="svg-section-title reveal">    
+  <div class="svg-section-title hover-contact">
+     
+    <div class="svg-section-title reveal">   
+      <img src="t-svg/b-l.svg"
+          data-light="t-svg/b-l.svg"
+          data-dark="t-svg/b-d.svg"
+          alt="About Title"
+          class="svg-title svg-blog"
+          onclick="location.href='blog.html'">
+    </div>  
+  </div>  
+
+  <div class="svg-section-title hover-contact">
+
+      <div class="svg-section-title reveal">    
+      <img src="t-svg/tt-l.svg"
+          data-light="t-svg/tt-d.svg"
+          data-dark="t-svg/tt-l.svg"
+          alt="About Title"
+          class="svg-title svg-timetable"
+          onclick="location.href='https://docs.google.com/spreadsheets/d/e/2PACX-1vS9SO6VI7WINzwtsMOINJmTrIZ2-vb2YkzaewVXfDvGU2XA28hfB3EnjaiRj5UCiNhqEnr-5-MN6ROK/pubhtml?gid=0&single=true'">
+      </div>
+  </div>
+
+  <div class="svg-section-title hover-contact">
+
+    <div class="svg-section-title reveal">    
       <img src="t-svg/cm-l.svg"
            data-light="t-svg/cm-l.svg"
            data-dark="t-svg/cm-d.svg"
@@ -127,29 +174,7 @@
     </div>
   </div>  
 
-    <div class="svg-section-title hover-contact">
-
-      <div class="svg-section-title reveal">    
-      <img src="t-svg/tt-l.svg"
-          data-light="t-svg/tt-d.svg"
-          data-dark="t-svg/tt-l.svg"
-          alt="About Title"
-          class="svg-title svg-timetable"
-          onclick="location.href='https://docs.google.com/spreadsheets/d/e/2PACX-1vS9SO6VI7WINzwtsMOINJmTrIZ2-vb2YkzaewVXfDvGU2XA28hfB3EnjaiRj5UCiNhqEnr-5-MN6ROK/pubhtml?gid=0&single=true'">
-      </div>
-    </div>  
-  <div class="svg-section-title hover-contact">
-
-    <div class="svg-section-title reveal">    
-      <a href="Arash_CV-3.pdf" target="_blank">
-        <img src="t-svg/tt-l.svg"
-            data-light="t-svg/cv-l.svg"
-            data-dark="t-svg/cv-d.svg"
-            alt="CV"
-            class="svg-title svg-cv">
-      </a>
-    </div>
-  </div>  
+  
 
  
 

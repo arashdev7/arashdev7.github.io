@@ -29,7 +29,7 @@ body {
   font-family: 'playpans', Arial, Helvetica, sans-serif;
   color: var(--text-color);
   margin: 0;
-  padding: 0.5rem 2rem 2rem;
+  padding: 0rem 2rem 2rem 2rem;
   background-color: var(--bg-color);
   transition: background-color 0.5s ease, color 0.5s ease;
   position: relative;
@@ -194,28 +194,68 @@ h3 {
   font-size: 1.8em;
 }
 
-/* --- Default nav bar --- */
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
+
+.mobile-menu-btn {
+  display: block;
+  position: fixed;
+  bottom: 1.2em;
+  right: 1.2em;
+  z-index: 1500;
   background-color: var(--card-bg);
-  padding: 0.8em;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-radius: 12px;
-  margin: -75px auto;
-  width: fit-content;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 5px var(--box-shadow);
-  font: normal 1.2em 'laqcuer', sans-serif ;
+  border: none;
+  padding: 0.6em 0.8em;
+  font-size: 1.5em;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px var(--box-shadow);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
 }
 
-/* --- Sticky mobile button --- */
-.mobile-menu-btn {
-  display: none;
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 250px;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(8px);
+  box-shadow: 2px 0 10px var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  font: normal 1.2em 'laqcuer', sans-serif;
+  gap: 1em;
+  padding: 2em 1em;
+  z-index: 2000;
+  transition: left 0.3s ease;
 }
+
+.mobile-sidebar.active {
+  left: 0;
+}
+
+.sidebar-theme-toggle {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 1em;
+  }
+
+.close-sidebar {
+    align-self: flex-end;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1em;
+    color: var(--accent-color);
+  }
+
+  .navbar {
+    display: none;
+  }
 
 @media (max-width: 768px) {
   body::before,
@@ -227,9 +267,6 @@ h3 {
     width: 200vw !important;
   }  
 
-  .navbar {
-    display: none;
-  }
 
   .mobile-menu-btn {
     display: block;
@@ -248,10 +285,6 @@ h3 {
   }
 }
 
-/* --- Sidebar styles --- */
-.mobile-sidebar {
-  display: none;
-}
 
 @media (max-width: 768px) {
   .mobile-sidebar {
@@ -295,34 +328,6 @@ h3 {
     margin-bottom: 1em;
     color: var(--accent-color);
   }
-}
-
-
-
-nav {
-  background-color: var(--card-bg); /* same translucent bg as project */
-  padding: 0.8em;
-  text-align: center;
-  box-shadow: 0 2px 5px var(--box-shadow);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-
-  border-radius: 12px;         /* rounded corners */
-  margin: 0px auto;          /* spacing around nav bar */
-  width: fit-content;          /* shrink-wrap nav if desired */
-  backdrop-filter: blur(8px);  /* optional: adds glassy blur */
-}
-
-
-nav a {
-  margin: 0 25px;
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: bold;
-  font-size: 1.1em;
 }
 
 .mobile-sidebar a {
@@ -581,8 +586,8 @@ nav a {
 .contact-popup {
   display: none;
   position: absolute;
-  top: -25%;
-  left: 50%;
+  top: -21%;
+  left: 60%;
   transform: translateX(-50%);
   background: var(--popup-bg, #222);
   color: white;
@@ -608,6 +613,157 @@ nav a {
 .contact-popup a:hover {
   transform: scale(1.2);
 }
+
+.click-contact-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0em; /* adjust as needed */
+}
+
+#contact-popup-trigger {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+  padding-left: 0.3em;  /* makes text match indentation of <a> */
+}
+
+
+#contact-popup {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  background: var(--card-bg);           /* ✅ adapts to theme */
+  color: var(--text-color);             /* ✅ adapts to theme */
+  padding: 16px 24px;
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 9999;
+  white-space: nowrap;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+#contact-popup a {
+  color: var(--text-color);           /* 👈 adapt to light/dark */
+  font-size: 30px;
+  transition: transform 0.2s ease;
+}
+
+
+#contact-popup a:hover {
+  transform: scale(1.2);
+}
+
+.theme-fab {
+  position: fixed;
+  bottom: 1.2em;
+  right: 4.8em; /* adjust this to place it left of the menu button */
+  z-index: 1500;
+  background-color: var(--card-bg);
+  border: none;
+  padding: 0.6em 0.8em;
+  font-size: 1.5em;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px var(--box-shadow);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-fab img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.theme-fab:hover img {
+  transform: rotate(25deg);
+}
+
+@keyframes rotate-and-scale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Animate img icon */
+.theme-animate img {
+  animation: rotate-and-scale 0.6s ease-in-out;
+}
+
+/* Optional: Glow around button */
+.theme-animate {
+  box-shadow: 0 0 12px var(--accent-color);
+}
+
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 1em;
+  font-size: 0.85em;
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+
+..svg-wrapper {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  height: auto;
+}
+
+.svg-wrapper .svg-title {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  width: 100%;
+  height: auto;
+}
+
+.svg-wrapper .light-svg {
+  opacity: 1;
+}
+
+.svg-wrapper .dark-svg {
+  opacity: 0;
+}
+
+body.light-theme .light-svg {
+  opacity: 1;
+}
+
+body.light-theme .dark-svg {
+  opacity: 0;
+}
+
+body:not(.light-theme) .light-svg {
+  opacity: 0;
+}
+
+body:not(.light-theme) .dark-svg {
+  opacity: 1;
+}
+
 
 
 /* Reusable card style for contact/about */
@@ -679,6 +835,14 @@ nav a {
   font-weight: normal;
   color: var(--accent-color);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* optional graffiti vibe */
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.site-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 6px var(--accent-color), 0 0 10px var(--accent-color);
 }
 
 
@@ -729,7 +893,7 @@ body:not(.light-theme) .iitb-logo {
   display: inline-block;
   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.4)); /* graffiti glow vibe */
   transition: transform 0.3s ease;
-  margin-top: 2em;
+  margin-top: -1em;
 }
 
 .svg-title:hover {
@@ -758,7 +922,7 @@ body:not(.light-theme) .iitb-logo {
   filter: drop-shadow(0 0 5px #ff1a1a)
           drop-shadow(0 0 10px #ff1a1a)
           drop-shadow(0 0 20px #ff1a1a);
-  transform: scale(1.02);
+  transform: scale(1.2);
 }
 
 .svg-row {
@@ -766,7 +930,7 @@ body:not(.light-theme) .iitb-logo {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.01rem;
+  gap: 2rem;
   margin-top: 4rem;
   flex-direction: row;
 }
@@ -799,17 +963,27 @@ body:not(.light-theme) .iitb-logo {
 }
 
 .svg-contact-me {
-  width: 500px;  /* Increase scaling */
+  width: 550px;  /* Increase scaling */
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-left: -20px
+}
+
+.svg-blog {
+  width: 400px;  /* Increase scaling */
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
 .svg-timetable {
-  width: 500px;  /* Increase scaling */
+  width: 450px;  /* Increase scaling */
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
+  margin-left: 30px;
+  margin-right: -30px
 }
 
 .svg-title:hover {
