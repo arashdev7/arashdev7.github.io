@@ -1334,6 +1334,16 @@ body:not(.light-theme) .iitb-logo {
   align-items: center;
 }
 
+.about-image2 {
+  float: center;
+  margin-top: 25px;     
+  margin-bottom: 15px; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-image1 img {
   width: 400px;
   height: auto;
@@ -1342,6 +1352,12 @@ body:not(.light-theme) .iitb-logo {
 
 .about-image img {
   width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-image2 img {
+  width: 600px;
   height: auto;
   border-radius: 10px;
 }
@@ -1367,6 +1383,11 @@ body:not(.light-theme) .iitb-logo {
     width: 90%;
     max-width: 300px; /* keeps image from being too big on mobile */
   }
+
+  .about-image2 img {
+    width: 90%;
+    max-width: 500px; /* keeps image from being too big on mobile */
+  }
 }
 
 .about-image .subtext {
@@ -1380,3 +1401,21 @@ body:not(.light-theme) .iitb-logo {
   color: gray;
   margin-top: 5px;
 }
+
+.project-link-red,
+.project-link-red:visited,
+.project-link-red:hover,
+.project-link-red:active {
+  color: red; /* keep red in all states */
+  text-decoration: none !important; /* kill underline completely */
+  transition: all 0.25s ease-in-out;
+}
+
+.project-link-red:hover,
+.project-link-red:active {
+  transform: scale(1.1); /* grow slightly */
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.9); /* glowing backlight */
+}
+
+
+
