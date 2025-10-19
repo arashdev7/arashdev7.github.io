@@ -127,3 +127,32 @@ if (sidebarToggleBtn) {
   }, 600); // Match animation duration
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const logo = document.getElementById('logo-img');
+  const player = document.getElementById('music-player');
+  let playing = false;
+
+  if (logo && player) {
+    // initialize - set small class initially for PNG
+    logo.classList.add('small');
+
+    logo.addEventListener('click', () => {
+      if (!playing) {
+        logo.src = 'assets/music.gif';
+        logo.classList.remove('small');
+        logo.classList.add('gif-size');
+        player.play();
+        playing = true;
+      } else {
+        logo.src = 'assets/hehe_final.png';
+        logo.classList.remove('gif-size');
+        logo.classList.add('small');
+        player.pause();
+        player.currentTime = 0;
+        playing = false;
+      }
+    });
+  }
+});
+
+

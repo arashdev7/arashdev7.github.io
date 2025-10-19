@@ -1054,6 +1054,12 @@ body:not(.light-theme) .dark-svg {
   z-index: 1000;
 }
 
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: -100px;  /* small space between name and music icon */
+}
+
 .site-title {
   font-family: 'Kingthing', sans-serif;
   font-size: 2.5em;
@@ -1416,6 +1422,44 @@ body:not(.light-theme) .iitb-logo {
   transform: scale(1.1); /* grow slightly */
   text-shadow: 0 0 12px rgba(255, 0, 0, 0.9); /* glowing backlight */
 }
+
+.music-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.music-logo {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.music-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Overlay styles */
+.gif-overlay {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 20px;            /* adjust vertical position */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;        /* above everything */
+  pointer-events: none; /* so clicks go through to logo below if needed */
+}
+
+.gif-overlay img {
+  width: 500px;       /* GIF size */
+  height: auto;
+  user-select: none;
+  pointer-events: auto; /* enable cursor change if needed */
+}
+
+
 
 
 
