@@ -1169,6 +1169,16 @@ body:not(.light-theme) .iitb-logo {
   align-items: center;
 }
 
+.about-image3 {
+  float: center;
+  margin-top: 25px;     
+  margin-bottom: 15px; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-image1 img {
   width: 400px;
   height: auto;
@@ -1183,6 +1193,12 @@ body:not(.light-theme) .iitb-logo {
 
 .about-image2 img {
   width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-image3 img {
+  width: 800px;
   height: auto;
   border-radius: 10px;
 }
